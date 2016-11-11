@@ -1,0 +1,119 @@
+@import "bourbon"
+@import "sass/reset"
+@import "sass/vars"
+@import "sass/base"
+
+.hidden
+	display: none
+
+h1, h2, h3, h4, h5, h6, .button,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-weight: 700
+	text-transform: uppercase
+a
+	outline: none!important
+	color: $white-color
+ul,li
+	padding: 0
+	list-style-type: none
+	margin: 0
+
+
+/* шапка	*/
+.header-home
+	position: relative
+	height: 100vh
+	text-align: center
+	color: $white-color
+	.header-bgi
+		width: 100%
+		height: 100%
+		position: absolute
+		background:
+			position: center center
+			size: cover
+			color: $bgc-color
+		filter: grayscale(80%)
+
+	/* Заголовок страницы */
+	.header-content
+		transform: translateY(-50%)
+		h1
+			font-size: 3.5rem
+			font-weight: 300
+			font-family: "Oswald", sans-serif
+			display: block
+			line-height: 4.2rem
+			padding-bottom: 15px
+			margin-bottom: 15px
+			position: relative
+			&::before
+				background-color: $accent-color
+				width: 20px
+				height: 2px
+				position: absolute
+				content: ""
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+		&_wrap
+			position: absolute
+			top: 50%
+
+
+
+/* затемнение */
+.bgc-head
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba($bgc-color, .6)
+
+/* верхняя панель */
+.top-line
+	padding-top: 12px
+	vertical-align: middle
+
+/* лого */
+.logo
+	font-family: "Oswald", sans-serif
+	font-size: 1.8rem
+	font-weight: 300
+	display: block
+
+/* menu */
+.main-menu
+	vertical-align: middle
+	li
+		display: inline-block
+		margin: 2px 15px
+		&:nth-child(1)
+			margin-left: 0
+		&:nth-child(6)
+			margin-right: 0
+		a
+			display: inline-block
+			font-size: 0.9rem
+			opacity: .8
+
+
+/* форма профиля и поиска */
+.panel-prifile
+	li
+		display: inline-block
+		margin: 2px 15px
+		button
+			background-color: transparent
+			border: none
+			i
+				font-size: 0.9rem
+				opacity: .8
+		&:nth-child(1)
+			margin-left: 0
+		&:nth-child(3)
+			margin-right: 0
+
+
+/* Заголовок */
