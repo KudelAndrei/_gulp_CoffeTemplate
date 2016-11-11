@@ -1,7 +1,7 @@
 $(function() {
 
 	// ВЫравнивание блоков по высоте
-	//$(".service-item h4").equalHeights(); 
+	$(".machine-item").equalHeights(); 
 
 	//Слайдер  https://gist.github.com/KudelAndrei/fca3e6e73e1e0aa21996a12af58c9069
 	$(".sl").slick({

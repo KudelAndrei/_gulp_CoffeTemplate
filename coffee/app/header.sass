@@ -19,6 +19,18 @@ ul,li
 	margin: 0
 
 
+
+
+/* затемнение фона*/
+.bgc-darck
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: rgba($bgc-color, .6)
+
+
 /* шапка	*/
 .header-home
 	position: relative
@@ -39,37 +51,37 @@ ul,li
 	.header-content
 		transform: translateY(-50%)
 		h1
-			font-size: 3.5rem
+			font-size: 4.5rem
 			font-weight: 300
 			font-family: "Oswald", sans-serif
 			display: block
-			line-height: 4.2rem
-			padding-bottom: 15px
+			line-height: 4.8rem
+			padding-bottom: 20px
 			margin-bottom: 15px
 			position: relative
 			&::before
-				background-color: $accent-color
-				width: 20px
-				height: 2px
-				position: absolute
-				content: ""
-				bottom: 0
+				@extend .before-line
 				left: 50%
 				transform: translateX(-50%)
+		p 
+			opacity: .7
+			font-weight: 300
+			line-height: 1.8rem
+			font-family: "Open Sans", sans-serif
 		&_wrap
 			position: absolute
 			top: 50%
-
-
-
-/* затемнение */
-.bgc-head
+	// кнопка вниз
+	.btn-bottom
 		position: absolute
-		top: 0
-		left: 0
-		bottom: 0
-		right: 0
-		background-color: rgba($bgc-color, .6)
+		bottom: 12%
+		display: inline-block
+		font-size: 1.5rem
+		opacity: .6
+		&:hover
+			opacity: 1
+			cursor: pointer
+
 
 /* верхняя панель */
 .top-line
@@ -82,8 +94,9 @@ ul,li
 	font-size: 1.8rem
 	font-weight: 300
 	display: block
+	text-transform: uppercase
 
-/* menu */
+/* меню */
 .main-menu
 	vertical-align: middle
 	li
@@ -114,6 +127,3 @@ ul,li
 			margin-left: 0
 		&:nth-child(3)
 			margin-right: 0
-
-
-/* Заголовок */

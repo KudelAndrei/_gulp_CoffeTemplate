@@ -1,7 +1,63 @@
 @import "bourbon"
 @import "vars"
 @import "libs"
+@import "base"
 
-//Custom styles here
+// стили для темной секции
+.s-darck
+	background-color: $bgc-color
+	color: $white-color
+
+// стили для светлой секции
+.s-white
+	background-color: $wbgc-color
+	color: #000
+
+// стили для стандарных секций
+.s-sect
+	padding-bottom: 50px
+	h2
+		padding-top: 35px
+		padding-bottom: 15px
+		text-transform: uppercase
+		font-size: 1.8rem
+	p 
+		font-size: 0.9rem
+		opacity: .9
+
+
+///* стили секции machine *///
+.machine
+	position: relative
+	h2
+		padding: 45px 0
+	
+	// карточки каталога
+	.machine
+		&-item
+			position: relative
+			margin-bottom: 30px
+			.bgc-darck
+				background-color: rgba($bgc-color,.75)
+			&__img
+				background: 
+					size: cover
+					position: center center
+				filter: grayscale(90%)
+				width: 100%
+				height: 100%
+				position: absolute
+			&__content
+				padding: 45px
+				max-width: 60%
+			&__head
+				padding-bottom: 16px
+				margin-bottom: 16px
+				position: relative
+				&::before
+					@extend .before-line
+
+
+
 
 @import "media"
