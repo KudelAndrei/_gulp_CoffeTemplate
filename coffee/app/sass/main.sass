@@ -25,7 +25,6 @@
 		font-size: 0.9rem
 		opacity: .9
 
-
 ///* стили секции machine *///
 .machine
 	position: relative
@@ -64,12 +63,14 @@
 		padding: 0 -15px
 		width: 50%
 		position: relative
-		height: 100vh
+		max-height: 100vh
+		min-height: 600px
 		float: left
 		@extend .s-sect
 		h2
 			position: relative
 			line-height: 2.4rem
+			padding-top: 0
 			margin-bottom: 15px
 			&::before
 				@extend .before-line
@@ -91,5 +92,98 @@
 		left: 50%
 		transform: translate(-50%, -50%)
 
+///* стили секции sales *///
+.sales
+	h2
+		padding-top: 50px
+	p
+		font-style: italic
+		font-family: "Open sans", sans-serif
+		margin-bottom: 60px
+	&-item
+		background-color: #fff
+		border: 2px solid rgba(#ccc, .2)
+		border-radius: 3px
+		padding: 70px 20px 40px 20px
+		position: relative
+		text-align: center
+		font-size: 1rem
+		font-style: normal
+		overflow: hidden
+		margin-bottom: 30px
+		&:hover
+			.sales-item__btn
+				bottom: 0
+			.btn-icon
+				opacity: 1
+		p
+			font-size: 1.2rem
+			font-style: normal
+			position: relative
+			padding-bottom: 15px
+			margin-bottom: 20px
+			line-height: 1.7rem
+			span
+				display: block
+			&::before
+				@extend .before-line
+				width: 30px
+				transform: translateX(-50%)
+		&__price
+			display: block
+			margin-bottom: 30px
+			font-weight: 600
+			opacity: .9
+		button.sales-item__btn
+			position: absolute
+			bottom: -50px
+			border: none
+			background-color: $bgc-color
+			color: $white-color
+			width: 100%
+			left: 0
+			height: 50px
+		.btn-icon
+			background-color: transparent
+			border: none
+			position: absolute
+			top: 20px
+			right: 20px
+			opacity: 0
+		img
+			margin-bottom: 25px
+			max-height: 200px
+			display: inline-block
+
+//* стили секции whyme *//
+.whyme
+	position: relative
+	height: 100vh
+	min-height: 600px
+	padding: 0
+	&-block
+		width: 50%
+		@extend .world-coffee__item
+		position: relative
+		height: 100%
+		float: left
+		&-right
+
+	&__bg
+		position: absolute
+		width: 100%
+		height: 100%
+		filter: grayscale(80%)
+		background:
+			color: $bgc-color
+			size: cover
+			repeat: no-repeat
+			position: center
+	&__content
+		position: absolute
+		top: 50%
+		left: 50%
+		display: block
+		transform: translate(-50%, -50%)
 
 @import "media"
