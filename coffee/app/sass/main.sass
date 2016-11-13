@@ -32,29 +32,27 @@
 		padding: 45px 0
 
 	// карточки каталога
-	.machine
-		&-item
+	&-item
+		position: relative
+		margin-bottom: 30px
+		.bgc-darck
+			background-color: rgba($bgc-color,.75)
+		&__img
+			background:
+				size: cover
+				position: center center
+			filter: grayscale(90%)
+			width: 100%
+			height: 100%
+			position: absolute
+		&__content
+			padding: 45px
+		&__head
+			padding-bottom: 16px
+			margin-bottom: 16px
 			position: relative
-			margin-bottom: 30px
-			.bgc-darck
-				background-color: rgba($bgc-color,.75)
-			&__img
-				background:
-					size: cover
-					position: center center
-				filter: grayscale(90%)
-				width: 100%
-				height: 100%
-				position: absolute
-			&__content
-				padding: 45px
-				max-width: 60%
-			&__head
-				padding-bottom: 16px
-				margin-bottom: 16px
-				position: relative
-				&::before
-					@extend .before-line
+			&::before
+				@extend .before-line
 
 ///* стили секции world-coffee *///
 .world-coffee
@@ -168,7 +166,15 @@
 		height: 100%
 		float: left
 		&-right
-
+			&__content
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				.whyme-item
+					padding-left: 60px
+	.whyme-item__desc-last
+		margin-bottom: 0
 	&__bg
 		position: absolute
 		width: 100%
@@ -185,5 +191,110 @@
 		left: 50%
 		display: block
 		transform: translate(-50%, -50%)
+
+///* стили секции интересные статьи *///
+.articles
+	&__head
+		margin-top: 15px
+	&__desc
+		margin-bottom: 30px
+	&-item
+		display: block
+		background-color: #fff
+		color: #000
+		border: 2px solid rgba($bgc-color, .04)
+		margin-bottom: 35px
+		img
+			width: 100%
+			filter: grayscale(80%)
+		&__content
+			padding: 40px 50px
+			opacity: .9
+			font-size: 0.9rem
+		&__category
+			font-size: 0.8rem
+			font-style: italic
+			margin-bottom: 12px
+			display: block
+		&__head
+			font-size: 1.4rem
+			position: relative
+			display: block
+			padding-bottom: 18px
+			margin-bottom: 18px
+			opacity: 1
+			&::before
+				@extend .before-line
+				width: 40px
+		&__desc
+			margin-bottom: 25px
+		&__line
+			display: block
+			font-style: italic
+		&__date
+			float: left
+		&__comment
+			float: right
+
+///* стили секции интстаграмм *///
+.instagram
+	&__photo
+		max-width: 300px
+		filter: grayscale(70%)
+		background:
+			color: $bgc-color
+			size: cover
+			position: center
+
+
+
+
+///* стили для футера *///
+.footer
+	padding: 50px 0
+	.logo
+		font-size: 1.5rem
+		margin-bottom: 35px
+		&__desc
+			opacity: .8
+			font-size: 0.9rem
+			margin-bottom: 20px
+	.phone
+		display: block
+		font-weight: 600
+		&-last
+			margin-bottom: 20px
+	.addr-mail
+		font-size: 0.9rem
+		opacity: .8
+		margin-bottom: 30px
+		display: block
+		&:hover
+			text-decoration: underline
+	&-item
+		font-size: 0.9rem
+		opacity: .8
+		&__head
+			margin-bottom: 20px
+			position: relative
+			padding-bottom: 15px
+			&::before
+				@extend .before-line
+		&__li
+			margin-bottom: 6px
+			display: block
+		&__soc
+			li,
+			.footer-item__li
+				display: inline-block
+			.footer-item__li
+				margin-right: 10px
+				font-size: 1.5rem
+
+
+
+
+
+
 
 @import "media"
