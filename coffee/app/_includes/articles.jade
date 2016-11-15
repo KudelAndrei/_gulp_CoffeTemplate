@@ -8,10 +8,11 @@ section#articles.articles.s-white.s-sect
   .container
     .row  
       // слайдер
-      .owl-carousel.owl-articles
+      .owl-carousel.owl-articles.zoom-gallery
         // слайды новостей
-        a(href='#').articles-item
-          img(src="../img/articles/1.jpeg", alt="История кофе")
+        .articles-item
+          a(href='../img/articles/1.jpeg' title="История кофе")
+            img(src="../img/articles/1.jpeg", alt="История кофе")
           .articles-item__content
             span.articles-item__category История
             h3.articles-item__head История кофе
@@ -20,8 +21,9 @@ section#articles.articles.s-white.s-sect
               span.articles-item__date 12 ноября 2016
               span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i>25
           
-        a(href='#').articles-item
-          img(src="../img/articles/2.jpg", alt="История кофе")
+        .articles-item
+          a(href='../img/articles/2.jpg' title="Виды и сорта")
+            img(src="../img/articles/2.jpg", alt="Виды и сорта")
           .articles-item__content
             span.articles-item__category Кофе 
             h3.articles-item__head Виды и сорта
@@ -30,8 +32,9 @@ section#articles.articles.s-white.s-sect
               span.articles-item__date 13 ноября 2016
               span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i> 22
         
-        a(href='#').articles-item
-          img(src="../img/articles/3.jpg", alt="Кофейные рецепты")
+        .articles-item
+          a(href='../img/articles/3.jpg' title="Кофейные рецепты")
+            img(src="../img/articles/3.jpg", alt="Кофейные рецепты")
           .articles-item__content
             span.articles-item__category Рецепты
             h3.articles-item__head Кофейные рецепты
@@ -40,8 +43,9 @@ section#articles.articles.s-white.s-sect
               span.articles-item__date 15 ноября 2016
               span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i> 10
         
-        a(href='#').articles-item
-          img(src="../img/articles/1.jpeg", alt="История кофе")
+        .articles-item
+          a(href='../img/articles/1.jpeg' title="История кофе")
+            img(src="../img/articles/1.jpeg", alt="История кофе")
           .articles-item__content
             span.articles-item__category История
             h3.articles-item__head История кофе

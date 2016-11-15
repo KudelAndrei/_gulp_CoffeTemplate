@@ -2,7 +2,12 @@ $(function() {
 
 	// ВЫравнивание блоков по высоте
 	$(".machine-item").equalHeights();
-//	$("a.articles-item ").equalHeights();
+	//	$("a.articles-item ").equalHeights();
+
+	$(".btn-icon").click(function(){
+		$(this).toggleClass("on");
+	});
+
 
 	// карусель новостей
 	$(".owl-articles").owlCarousel({
@@ -24,7 +29,7 @@ $(function() {
 				}
 	});
 
-	//* попап окна *//
+	//* попап окна новости *//
 	$('.zoom-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -34,7 +39,7 @@ $(function() {
 		image: {
 			verticalFit: true,
 			titleSrc: function(item) {
-				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+				return item.el.attr('title');
 			}
 		},
 		gallery: {
@@ -47,10 +52,23 @@ $(function() {
 				return element.find('img');
 			}
 		}
-
 	});
 
-
+	//* попап окна товара *//
+	$('.image-popup-no-margins').magnificPopup({
+	type: 'image',
+	closeOnContentClick: true,
+	closeBtnInside: false,
+	fixedContentPos: true,
+	mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+	image: {
+		verticalFit: true
+	},
+	zoom: {
+		enabled: true,
+		duration: 300 // don't foget to change the duration also in CSS
+	}
+});
 
 	//плавный скрол в хроме
 	try {
