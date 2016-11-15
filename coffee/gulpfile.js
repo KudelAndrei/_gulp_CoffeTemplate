@@ -16,7 +16,7 @@ var gulp           = require('gulp'),
 		bourbon        = require('node-bourbon'),
 		ftp            = require('vinyl-ftp'),
 		notify         = require("gulp-notify"),
-		jade           = require('gulp-jade'); 
+		jade           = require('gulp-jade');
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -54,7 +54,7 @@ gulp.task('headersass', function() {
 gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/slick/slick.min.js',
+		'app/libs/owl-carousel/owl.carousel.min.js',
 		'app/libs/equalHeights/equalHeights.js',
 		//'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js'
 		])
@@ -73,7 +73,7 @@ gulp.task('jade', function() {
 /* все файлы которые include-им
 gulp.task('jade1', function() {
 	 return gulp.src('app/_includes/*.jade')
-			.pipe(jade()) 
+			.pipe(jade())
 			.pipe(gulp.dest('app/_includes')); // указываем gulp куда положить скомпилированные HTML файлы
 });
 */
@@ -95,7 +95,7 @@ gulp.task('imagemin', function() {
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		})))
-		.pipe(gulp.dest('dist/img')); 
+		.pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('buildhtml', function() {

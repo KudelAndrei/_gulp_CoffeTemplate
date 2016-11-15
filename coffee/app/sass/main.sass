@@ -148,6 +148,8 @@
 			top: 20px
 			right: 20px
 			opacity: 0
+			&:hover
+				color: #da4453
 		img
 			margin-bottom: 25px
 			max-height: 200px
@@ -159,6 +161,8 @@
 	height: 100vh
 	min-height: 600px
 	padding: 0
+	.bgc-darck
+		background-color: rgba($bgc-color,.78)
 	&-block
 		width: 50%
 		@extend .world-coffee__item
@@ -173,6 +177,13 @@
 				transform: translate(-50%, -50%)
 				.whyme-item
 					padding-left: 60px
+					&__head
+						margin-bottom: 10px
+						padding-bottom: 10px
+						position: relative
+						&::before
+							@extend .before-line
+							width: 30px
 	.whyme-item__desc-last
 		margin-bottom: 0
 	&__bg
@@ -206,6 +217,7 @@
 		margin-bottom: 35px
 		img
 			width: 100%
+			height: 220px
 			filter: grayscale(80%)
 		&__content
 			padding: 40px 50px
@@ -235,23 +247,34 @@
 			float: left
 		&__comment
 			float: right
+			i
+				margin-right: 5px
 
 ///* стили секции интстаграмм *///
 .instagram
-	&__photo
-		max-width: 300px
-		filter: grayscale(70%)
-		background:
-			color: $bgc-color
-			size: cover
-			position: center
-
-
+	&__head
+		font-weight: 600
+		margin-top: 20px
+	&__desc
+		margin-bottom: 55px
+	.owl-instagram__item
+		width: 100%
+		height: 250px
+		margin: 0
+		.owl-instagram__img
+			width: 100%
+			height: 100%
+			background-size: cover
+			background-position: center
+			filter: grayscale(90%)
+			&:hover
+				filter: grayscale(0%)
 
 
 ///* стили для футера *///
 .footer
 	padding: 50px 0
+	font-weight: 300
 	.logo
 		font-size: 1.5rem
 		margin-bottom: 35px
@@ -284,12 +307,13 @@
 			margin-bottom: 6px
 			display: block
 		&__soc
+			opacity: 1
 			li,
 			.footer-item__li
 				display: inline-block
 			.footer-item__li
-				margin-right: 10px
-				font-size: 1.5rem
+				margin-right: 14px
+				font-size: 1.1rem
 
 
 

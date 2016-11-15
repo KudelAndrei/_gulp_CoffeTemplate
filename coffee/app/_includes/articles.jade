@@ -5,7 +5,11 @@ section#articles.articles.s-white.s-sect
         h2.articles__head Интересные статьи
         p.articles__desc все стаьи
       
-      .col-md-4.col-sm-6
+  .container
+    .row  
+      // слайдер
+      .owl-carousel.owl-articles
+        // слайды новостей
         a(href='#').articles-item
           img(src="../img/articles/1.jpeg", alt="История кофе")
           .articles-item__content
@@ -14,9 +18,28 @@ section#articles.articles.s-white.s-sect
             p.articles-item__desc Этот напиток достоин высших похвал. Он способен изгнать из ума вульгарность и гнев.
             .articles-item__line.clearfix
               span.articles-item__date 12 ноября 2016
-              span.articles-item__comment 25
+              span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i>25
+          
+        a(href='#').articles-item
+          img(src="../img/articles/2.jpg", alt="История кофе")
+          .articles-item__content
+            span.articles-item__category Кофе 
+            h3.articles-item__head Виды и сорта
+            p.articles-item__desc В этой статье мы узнаем в чем же разница и познакомимся с разновидностями кофе.
+            .articles-item__line.clearfix
+              span.articles-item__date 13 ноября 2016
+              span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i> 22
         
-      .col-md-4.col-sm-6
+        a(href='#').articles-item
+          img(src="../img/articles/3.jpg", alt="Кофейные рецепты")
+          .articles-item__content
+            span.articles-item__category Рецепты
+            h3.articles-item__head Кофейные рецепты
+            p.articles-item__desc Сборник из трех самых вкусных кофейных рецептов. Дегустируйте и выбирайте свой.
+            .articles-item__line.clearfix
+              span.articles-item__date 15 ноября 2016
+              span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i> 10
+        
         a(href='#').articles-item
           img(src="../img/articles/1.jpeg", alt="История кофе")
           .articles-item__content
@@ -25,15 +48,4 @@ section#articles.articles.s-white.s-sect
             p.articles-item__desc Этот напиток достоин высших похвал. Он способен изгнать из ума вульгарность и гнев.
             .articles-item__line.clearfix
               span.articles-item__date 12 ноября 2016
-              span.articles-item__comment 25
-  
-      .col-md-4.hidden-sm
-        a(href='#').articles-item
-          img(src="../img/articles/1.jpeg", alt="История кофе")
-          .articles-item__content
-            span.articles-item__category История
-            h3.articles-item__head История кофе
-            p.articles-item__desc Этот напиток достоин высших похвал. Он способен изгнать из ума вульгарность и гнев.
-            .articles-item__line.clearfix
-              span.articles-item__date 12 ноября 2016
-              span.articles-item__comment 25
+              span.articles-item__comment <i class="fa fa-comment-o" aria-hidden="true"></i>25
