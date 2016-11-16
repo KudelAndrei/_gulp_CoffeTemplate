@@ -13,7 +13,19 @@ $(function() {
 	$(".owl-articles").owlCarousel({
 		loop: false,
 		margin: 20,
-		nav: true,
+		animateIn: "flipInX",
+		animateOut: "slideOutDown",
+		responsive:{
+        1200:{ items: 3 },
+				620:{ items: 2 },
+				310:{ items: 1 },
+				}
+	});
+	$(".next").click(function(){
+		$(".owl-articles").trigger('next.owl.carousel');
+	});
+	$(".prev").click(function(){
+		$(".owl-articles").trigger('prev.owl.carousel');
 	});
 
 	// карусель инстаграма
