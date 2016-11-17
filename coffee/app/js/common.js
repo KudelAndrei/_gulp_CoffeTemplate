@@ -12,7 +12,6 @@ $(function() {
 	// карусель новостей
 	$(".owl-articles").owlCarousel({
 		loop: false,
-		margin: 20,
 		animateIn: "flipInX",
 		animateOut: "slideOutDown",
 		responsive:{
@@ -32,6 +31,8 @@ $(function() {
 	$(".owl-instagram").owlCarousel({
 		loop:true,
 		center: true,
+		autoplay: true,
+		autoplayTimeout: 6000,
 		responsive:{
         1200:{ items: 5 },
 				1000:{ items: 4 },
